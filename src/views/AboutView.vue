@@ -1,6 +1,12 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <v-icon
+      large
+      color="green darken-2"
+    >
+      mdi-domain
+    </v-icon>
   </div>
 </template>
 
