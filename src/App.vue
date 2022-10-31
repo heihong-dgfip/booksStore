@@ -1,21 +1,29 @@
 <template>
   <v-app>
     <v-main>
-      <router-view/>
+
+      <RouterLink to="/">books</RouterLink>
+        <RouterLink to="/cart">cart</RouterLink>
+    
+        <div class="content">
+            <RouterView/>
+        </div>
+     
     </v-main>
   </v-app>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'App',
-
-  data () {
-    return {
-      //
-    }
-  },
-})
+   
 </script>
+
+<style>
+    .content{
+        margin-top: '25px';
+        border: 1px solid black;
+    }
+
+</style>
