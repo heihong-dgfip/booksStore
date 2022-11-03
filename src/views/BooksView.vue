@@ -9,14 +9,15 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
+import axios from "axios";
 
 const books: any = ref(); 
 
 onMounted(() => {
  
-  fetch('http://localhost:3000/books')
-  .then(response => response.json())
-  .then(data => books.value = data)
+    axios.get('data.json')
+  .then(response => console.log(response))
+  
 
 
 });
