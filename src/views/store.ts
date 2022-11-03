@@ -1,3 +1,4 @@
+import { type } from 'os';
 import { reactive } from 'vue'
 
 interface IBook{
@@ -6,8 +7,11 @@ interface IBook{
     price: number
 }
 
+
+let _cart: IBook[] = []
+
 export const store = reactive({
-  cart: [],
+  cart: _cart,
   addElement(book:IBook){
     this.cart.push(book);
   }
